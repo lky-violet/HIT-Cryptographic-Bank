@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SHA算法测试</title>
+
+    <script type="text/javascript" src="./labjs/sha_dev.js"></script>
+
+    <script type="text/javascript">
+        var shaObj1 = new jsSHA("SHA-256", "TEXT");
+        shaObj1.update("likaiyuan");
+        var hash1 = shaObj1.getHash("HEX");
+        document.write("likaiyuan经过加密后："+hash1);
+        document.write('<br/>')
+        var shaObj2=new jsSHA("SHA-1","TEXT");
+        shaObj2.update("sskkksjsslwklwdmskmlaslalkslaxlaxklsamxmkaxmsalxalxmlaxmslaxlal");
+        var hash2 = shaObj2.getHash("HEX");
+        document.write("sskkksjsslwklwdmskmlaslalkslaxlaxklsamxmkaxmsalxalxmlaxmslaxlal加密后："+hash2)
+    </script>
+
+</head>
+<body>
+</body>
+</html>
